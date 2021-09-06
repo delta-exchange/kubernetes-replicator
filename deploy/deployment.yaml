@@ -23,7 +23,7 @@ spec:
       containers:
       - name: kubernetes-replicator
         securityContext: {}
-        image: quay.io/mittwald/kubernetes-replicator:latest
+        image: 271747276495.dkr.ecr.eu-west-1.amazonaws.com/kubernetes-replicator:latest
         imagePullPolicy: Always
         args: []
         ports:
@@ -39,3 +39,5 @@ spec:
             path: /healthz
             port: health
         resources: {}
+      imagePullSecrets:
+        - name: ecr-cred-helper
